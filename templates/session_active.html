@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Active</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .timer {
+      font-size: 3rem;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Session Active</h1>
+  <p>Subject ID: <strong>{{ subject_id }}</strong></p>
+  <div class="timer" id="countdown">05:00</div>
+
+  <script>
+    let duration = 5 * 60; // 5 minutes in seconds
+    const countdown = document.getElementById('countdown');
+
+    function updateTimer() {
+      const minutes = Math.floor(duration / 60);
+      const seconds = duration % 60;
+
+      countdown.textContent =
+        String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
+
+      if (duration > 0) {
+        duration--;
+        setTimeout(updateTimer, 1000);
+      } else {
+        countdown.textContent = "Session Ended";
+        setTimeout(() => {
+          window.location.href = "/"; // Redirects to home page
+        }, 2000); // wait 2 seconds after timer ends
+      }
+    }
+
+    updateTimer();
+  </script>
+</body>
+</html>

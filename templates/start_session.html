@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Active</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  
+
+  <style>
+
+     /* Navbar */
+  .navbar {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #ffffff;
+    
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+        
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 20px 0;
+      font-size: 1.2rem;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #003366;
+      font-size: 3rem;
+      width: 50%;
+      max-width: 200px;
+      min-width: 120px;
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 500px) {
+      .timer {
+        font-size: 2.2rem;
+        padding: 15px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <nav class="navbar">
+    <span>
+      <a href="https://nitdelhi.ac.in">
+        <img width="67px" src="{{ url_for('static', filename='image.png') }}" alt="Home">
+      </a>
+    </span>
+    <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+    <span><a href="#services">Services</a></span>
+    <span><a href="contact.html">Contact</a></span>
+    <span class="dropdown">
+      <a href="#" class="dropbtn">Login ▾</a>
+      <div class="dropdown-content">
+        <a href="{{ url_for('student_login') }}">Student Login</a>
+      </div>
+    </span>
+    <span> <a href="mode_selector.html">Mode</a></span>
+  </nav>
+
+  <h1>Session Active</h1>
+  <p>Subject ID: <strong>{{ subject_id }}</strong></p>
+  <div class="timer" id="countdown">05:00</div>
+
+  <script>
+    let duration = 5 * 60; // 5 minutes in seconds
+    const countdown = document.getElementById('countdown');
+
+    function updateTimer() {
+      const minutes = Math.floor(duration / 60);
+      const seconds = duration % 60;
+
+      countdown.textContent =
+        String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
+
+      if (duration > 0) {
+        duration--;
+        setTimeout(updateTimer, 1000);
+      } else {
+        countdown.textContent = "Session Ended";
+        setTimeout(() => {
+          window.location.href = "/"; // Redirects to home page
+        }, 2000);
+      }
+    }
+
+    updateTimer();
+  </script>
+</body>
+</html>

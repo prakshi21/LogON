@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="flex">
+        <a href="https://nitdelhi.ac.in">
+          <img width="150px" src="/static/nit-delhi-logo.svg" alt="NIT Delhi Logo">
+        </a>
+        <div class="h1">
+          <div>National Institute Of Technology Delhi</div>
+          <div class="head">An autonomous body under Ministry of Education</div>
+        </div>
+    
+        <a href="http://127.0.0.1:3000/website.html">
+          <img width="90px" src="{{ url_for('static', filename='Screenshot_2025-04-10_at_9.03.29_PM-removebg-preview.png') }}" alt="NIT Delhi Logo">
+        </a>
+    </div>
+    
+    <nav class="navbar">
+      <span>
+        <a href="https://nitdelhi.ac.in">
+          <img width="67px" src="{{ url_for('static', filename='image.png') }}" alt="Home">
+        </a>
+      </span>
+      <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+      <span><a href="#services">Services</a></span>
+      <span><a href="contact.html">Contact</a></span>
+      <span class="dropdown">
+        <a href="#" class="dropbtn">Login ▾</a>
+        <div class="dropdown-content">
+          <a href="{{ url_for('student_login') }}">Student Login</a>
+        </div>
+      </span>
+      <span> <a href="mode_selector.html">Mode</a></span>
+    </nav>
+  
+
+    <!-- Attendance Section -->
+    <div class="box1">
+        <h1>Attendance Report</h1>
+    
+        <h2>Welcome</h2> 
+        <div class="roll">{{ student_name }} (ID: {{ student_id }})</div>
+    </div>
+    <table border="1">
+        <tr>
+            <th>Subject</th>
+            <th>Attended</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Status</th>
+        </tr>
+        {% for subject in attendance %}
+        <tr>
+            <td>{{ subject.subject }}</td>
+            <td>{{ subject.attended }}</td>
+            <td>{{ subject.total_classes }}</td>
+            <td>{{ subject.percentage }}%</td>
+            <td>
+              {% if subject.percentage >= 75 %}
+              <img width="30px" src="/static/tick.png">
+              {% else %}
+              <img width="30px" src="/static/cross-removebg-preview.png">
+              {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Meal Report Section -->
+    <div class="box1" style="margin-top: 40px;">
+        <h1>Meal Report</h1>
+        <table border="1">
+            <tr>
+                <th>Meal Type</th>
+                <th>Count</th>
+                <th>Price per Meal (₹)</th>
+                <th>Subtotal (₹)</th>
+            </tr>
+            {% for meal in meals %}
+            <tr>
+                <td>{{ meal.meal_type }}</td>
+                <td>{{ meal.count }}</td>
+                <td>{{ meal.price }}</td>
+                <td>{{ meal.count * meal.price }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="3" style="text-align: right;"><strong>Total Expense (₹):</strong></td>
+                <td><strong>{{ total_expense }}</strong></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
+
+

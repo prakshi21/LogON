@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Select Subject</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='subject.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  
+</head>
+<body>
+    <div class="flex">
+        <a href="https://nitdelhi.ac.in">
+          <img width="150px" src="/static/nit-delhi-logo.svg" alt="NIT Delhi Logo">
+        </a>
+        <div class="h1">
+          <div>National Institute Of Technology Delhi</div>
+          <div class="head">An autonomous body under Ministry of Education</div>
+        </div>
+    
+        <a href="http://127.0.0.1:3000/website.html">
+          <img width="90px" src="{{ url_for('static', filename='Screenshot_2025-04-10_at_9.03.29_PM-removebg-preview.png') }}" alt="NIT Delhi Logo">
+        </a>
+      </div>
+    
+      <nav class="navbar">
+        <span>
+          <a href="https://nitdelhi.ac.in">
+            <img width="67px" src="{{ url_for('static', filename='image.png') }}" alt="Home">
+          </a>
+        </span>
+        <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+        <span><a href="#services">Services</a></span>
+        <span><a href="contact.html">Contact</a></span>
+        <span class="dropdown">
+          <a href="#" class="dropbtn">Login ▾</a>
+          <div class="dropdown-content">
+            <a href="{{ url_for('student_login') }}">Student Login</a>
+          </div>
+        </span>
+        <span> <a href="mode_selector.html">Mode</a></span>
+      </nav>
+    
+    
+  <div class="box1"><h2>Welcome, Teacher {{ teacher_id }}</h2>
+  </div>
+
+  {% if message %}
+    <p style="color: red;">{{ message }}</p>
+  {% endif %}
+
+  <form action="/start_session" method="POST">
+    <input type="hidden" name="teacher_id" value="{{ teacher_id }}">
+
+    <label for="subject_id">Select a Subject:</label>
+    <select name="subject_id" required>
+      {% for subject in subjects %}
+        <option value="{{ subject.subject_id }}">{{ subject.name }} (ID: {{ subject.subject_id }})</option>
+      {% endfor %}
+    </select>
+
+    <button type="submit">Start Session</button>
+  </form>
+</body>
+</html>

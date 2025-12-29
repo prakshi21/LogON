@@ -1,0 +1,181 @@
+*{
+  font-family: poppins;
+  margin:0%;
+  padding:0%;
+}
+.box{
+    display: flex;
+    margin: 5% auto;
+    max-width: 42%;
+    width: auto;
+     height:auto;
+    padding: 15px;
+    background: #f4f4f4;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 15px;
+
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  background-color: #06223f;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.h1 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.head{
+  font-size: 1rem;
+}
+
+ /* Navbar */
+ .navbar {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #ffffff;
+  
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#studentLoginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+#studentLoginForm input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  flex: 1;
+  transition: border-color 0.3s ease;
+}
+
+#studentLoginForm input[type="text"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+#studentLoginForm button {
+  padding: 10px 20px;
+  background-color: #062f57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#studentLoginForm button:hover {
+  background-color: #576d83;
+}
+
+.text{
+    font-family: poppins;
+    padding:15px;
+}
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color:#696969;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .flex{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .flex form{
+
+    padding: 5px;
+    
+    border-radius: 15px;
+
+
+  }
+ 
+  .login-box button:hover {
+    background-color: #dddcdc;
+}

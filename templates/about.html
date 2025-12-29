@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Based Attendance and Mess Tracker</title>
+    <link rel="stylesheet"href="{{ url_for('static', filename='about.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <h1>RFID Based Attendance and Mess Tracker</h1>
+        <p>Submitted by:<br>
+           Paridhi Gupta (241210085), Prakshi Agarwal (241210091), Rachit Singh Rana (241210097)</p>
+        <p>Department of Computer Science and Engineering, NIT Delhi</p>
+    </header>
+    <nav class="navbar">
+        <span>
+          <a href="https://nitdelhi.ac.in">
+            <img width="67px" src="{{ url_for('static', filename='image.png') }}" alt="Home">
+          </a>
+        </span>
+        <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+        <span><a href="#services">Services</a></span>
+        <span><a href="contact.html">Contact</a></span>
+        <span class="dropdown">
+          <a href="#" class="dropbtn">Login ▾</a>
+          <div class="dropdown-content">
+            <a href="{{ url_for('student_login') }}">Student Login</a>
+          </div>
+        </span>
+        <span> <a href="mode_selector.html">Mode</a></span>
+      </nav>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#motivation">Motivation</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#technology">Technology Used</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>In educational institutions, accurate attendance tracking and efficient mess management are crucial... [Content continues]</p>
+        </section>
+
+        <section id="motivation">
+            <h2>Motivation</h2>
+            <p>Managing student attendance and mess operations manually is inefficient and vulnerable to errors... [Content continues]</p>
+        </section>
+
+        <section id="objectives">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Automate Attendance Tracking</li>
+                <li>Enable Subject-Wise Attendance Management</li>
+                <li>Track Mess Meal Consumption</li>
+                <li>Prevent Unauthorized Access or Double Entries</li>
+                <li>Provide a Web Interface for Users</li>
+                <li>Maintain a Centralized Database</li>
+                <li>Ensure System Scalability and Integration</li>
+            </ul>
+        </section>
+
+        <section id="technology">
+            <h2>Technology Used</h2>
+            <h3>Hardware</h3>
+            <ul>
+                <li>RFID Reader (RC522)</li>
+                <li>RFID Tags (Cards)</li>
+                <li>Arduino Uno / NodeMCU</li>
+                <li>USB Power Supply / Laptop</li>
+            </ul>
+            <h3>Software</h3>
+            <ul>
+                <li>Python</li>
+                <li>Flask (Python Framework)</li>
+                <li>MySQL</li>
+                <li>HTML/CSS</li>
+                <li>Arduino IDE</li>
+            </ul>
+        </section>
+
+        <section id="methodology">
+            <h2>Methodology</h2>
+            <p>The project follows a modular and systematic approach... [Content continues]</p>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            <ul>
+                <li>Accurate Attendance Tracking</li>
+                <li>Real-Time Meal Logging</li>
+                <li>User-Friendly Interface</li>
+                <li>Seamless Hardware-Software Integration</li>
+                <li>Centralized Data Management</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The RFID-based Attendance and Mess Tracker system effectively addresses the common challenges... [Content continues]</p>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ol>
+                <li>NXP Semiconductors, "MFRC522 RFID Reader IC Datasheet"</li>
+                <li>Arduino, "Arduino Reference"</li>
+                <li>Flask, "Flask Documentation"</li>
+                <li>Oracle, "MySQL 8.0 Reference Manual"</li>
+                <li>Circuit Digest, "Microcontroller Projects"</li>
+                <li>CodeWithHarry, "HTML, CSS, JavaScript Tutorials"</li>
+                <li>Postman, "Postman API Platform"</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 RFID Attendance and Mess Tracker Project</p>
+    </footer>
+
+</body>
+</html>

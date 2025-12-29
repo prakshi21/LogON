@@ -1,0 +1,212 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            font-family: poppins;
+            background-color: #ffffff;
+        }
+
+        .box{
+            display: flex;
+            margin: 5% auto;
+            max-width: 42%;
+            width: 100%;
+             height:auto;
+            padding: 15px;
+            background: #f4f4f4;
+            align-items:center;
+            flex-direction: column;
+            border-radius: 15px;
+        
+        }
+        
+        .flex {
+          display: flex;
+          
+          flex-direction: row;
+          background-color: #06223f;
+          align-items: center;
+          padding: 20px;
+          gap: 20px;
+          justify-content: center;
+        }
+        
+        .h1 {
+          color: white;
+          font-size: 1.7rem;
+          font-weight: 600;
+        }
+        
+        .head{
+          font-size: 1rem;
+        }
+        
+        /* Navbar */
+  .navbar {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #ffffff;
+    
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.box1{
+    margin-top: 15px;
+    padding: 15px;
+    
+    min-width: 75vw;
+    border-radius: 15px;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    background-color: #06223f;
+}
+        h1 {text-align: center;
+            color: white;
+        }
+
+        h2 {text-align: center;
+            color: white;
+            margin-top: 30px;
+        }
+        .roll{
+            font-size: larger;
+            text-align: center;
+            color: white;
+        }
+
+
+     
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+        text-align: center;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #003366;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .status-ok {
+        color: green;
+        font-weight: bold;
+    }
+
+    .status-bad {
+        color: red;
+        font-weight: bold;
+    }
+
+
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 16px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .styled-table th,
+        .styled-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .styled-table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+       
+
+       
+
+        .meal-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .meal-list li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border-left: 5px solid #2ecc71;
+        }
+    

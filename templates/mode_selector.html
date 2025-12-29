@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Mode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mode.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+   
+</head>
+<div class="flex">
+    <a href="https://nitdelhi.ac.in">
+      <img width="150px" src="/static/nit-delhi-logo.svg" alt="NIT Delhi Logo">
+    </a>
+    <div class="h1">
+      <div>National Institute Of Technology Delhi</div>
+      <div class="head">An autonomous body under Ministry of Education</div>
+    </div>
+
+    <a href="http://127.0.0.1:3000/website.html">
+      <img width="90px" src="{{ url_for('static', filename='Screenshot_2025-04-10_at_9.03.29_PM-removebg-preview.png') }}" alt="NIT Delhi Logo">
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <span>
+      <a href="https://nitdelhi.ac.in">
+        <img width="67px" src="{{ url_for('static', filename='image.png') }}" alt="Home">
+      </a>
+    </span>
+    <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+    <span><a href="#services">Services</a></span>
+    <span><a href="contact.html">Contact</a></span>
+    <span class="dropdown">
+      <a href="#" class="dropbtn">Login ▾</a>
+      <div class="dropdown-content">
+        <a href="{{ url_for('student_login') }}">Student Login</a>
+      </div>
+    </span>
+    <span> <a href="mode_selector.html">Mode</a></span>
+  </nav>
+
+<body>
+    <h1>Select Mode</h1>
+
+    <form action="/set_mode" method="POST">
+        <button class="mode-button" type="submit" name="mode" value="attendance">Attendance Mode</button>
+        <button class="mode-button" type="submit" name="mode" value="mess">Mess Mode</button>
+    </form>
+
+    <script>
+        // Optional: Add some JavaScript for feedback on successful mode change
+    </script>
+</body>
+</html>

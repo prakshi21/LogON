@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ /* Navbar */
+ .box{
+  display: flex;
+  margin-top: 0;
+  flex-direction: row;
+
+ }
+ .navbar {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #ffffff;
+  
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Center vertically & horizontally with scroll fallback */
+
+body {
+  min-height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+/* Info box (VERTICAL LAYOUT) */
+.info {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Hover effect */
+.info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Separation line */
+.separation {
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+  width: 40%;
+}
+
+/* Text and authors layout vertically */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.authors {
+  margin-top: 15px;
+}
+
+.author {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  width: 100%;
+}
