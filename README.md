@@ -1,4 +1,4 @@
-# RFID Technology Based Attendance and Mess Tracker
+# LogON - RFID Technology Based Wifi Enabled Attendance Tracker
 
 ##  Overview
 
